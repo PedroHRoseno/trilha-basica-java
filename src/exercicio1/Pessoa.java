@@ -10,6 +10,12 @@ public class Pessoa {
     private LocalDate data;
     private int altura;
 
+    public Pessoa(String nome, LocalDate data, int altura ){
+        this.nome = nome;
+        this.data = data;
+        this.altura = altura;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
