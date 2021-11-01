@@ -1,6 +1,9 @@
 import exercicio1.Pessoa;
 import exercicio2.Agenda;
 import exercicio3.Elevador;
+import exercicio4.Controle;
+import exercicio4.Televisao;
+
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.Locale;
@@ -32,6 +35,7 @@ public class Programa {
         System.out.println(agenda.imprimePessoa(0));
          */
         //Exercício 3
+        /*
         Elevador elevador1 = new Elevador(10, 5);
         elevador1.entra();
         elevador1.entra();
@@ -57,6 +61,26 @@ public class Programa {
         elevador1.desce();
         elevador1.desce();
         elevador1.desce();
+         */
+        //Exercício 4
+
+        Televisao televisao1 = new Televisao();
+        Controle controle1 = new Controle(televisao1);
+        controle1.ligarTelevisao();
+        System.out.println(controle1.mostraInformações());
+        controle1.aumentaCanal();
+        controle1.aumentaVolume();
+        System.out.println(controle1.mostraInformações());
+        controle1.aumentaVolume();
+        controle1.aumentaVolume();
+        controle1.aumentaVolume();
+        controle1.trocaCanal(20);
+        controle1.trocaCanal(31);
+        System.out.println(controle1.mostraInformações());
+        controle1.mutarTelevisao();
+        System.out.println(controle1.mostraInformações());
+
+
 
 
 
