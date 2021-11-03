@@ -3,6 +3,7 @@ import exercicio2.Agenda;
 import exercicio3.Elevador;
 import exercicio4.Controle;
 import exercicio4.Televisao;
+import exercicio5.Selecao;
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -63,7 +64,7 @@ public class Programa {
         elevador1.desce();
          */
         //Exercício 4
-
+        /*
         Televisao televisao1 = new Televisao();
         Controle controle1 = new Controle(televisao1);
         controle1.ligarTelevisao();
@@ -79,8 +80,35 @@ public class Programa {
         System.out.println(controle1.mostraInformações());
         controle1.mutarTelevisao();
         System.out.println(controle1.mostraInformações());
+         */
+        //Exercício 5
+        Selecao selecao = new Selecao();
+        System.out.println(selecao.selecionaCaminhao().retornaInformacoes());
+        /*
+        ORDEM DO INPUT NO TESTE
+        tipoCaminhao (alfa ou beta)
+        quantidade de pluviometros a serem adicionados
+        tipo (A, B ou C)
+        Exemplo 1:
+        alfa
+        2
+        A
+        A
+        beta
+        3
+        A
+        C
+        B
+        fim
+        Exemplo 2:
+        beta
+        3
+        A
+        B
+        C
+        fim
 
-
+         */
 
 
 
