@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Selecao extends Controle{
-    List<Caminhao> listaCaminhoes = new ArrayList<Caminhao>();
+    List<Caminhao> listaCaminhoes = new ArrayList<>();
 
-    public List<Caminhao> insereCaminhao(){
+    public void insereCaminhao(){
         String escolhaTipo = "flag";
         while(!escolhaTipo.equals("fim")){
             escolhaTipo = leString();
@@ -16,7 +16,6 @@ public class Selecao extends Controle{
                 this.listaCaminhoes.add(new Caminhao(escolhaTipo, escolhaQuantidade, listaPluviometro));
             }
         }
-        return this.listaCaminhoes;
     }
 
     public Caminhao selecionaCaminhao(){
@@ -33,7 +32,7 @@ public class Selecao extends Controle{
     }
 
     public List<Pluviometro> leListaPluviometro(int escolhaQuantidade) {
-        List<Pluviometro> listaPluviometro = new ArrayList<Pluviometro>();
+        List<Pluviometro> listaPluviometro = new ArrayList<>();
         for(int i=0; i < escolhaQuantidade; i++){
             listaPluviometro.add(new Pluviometro(leString().toUpperCase().replaceAll(" ", "")));
         }
