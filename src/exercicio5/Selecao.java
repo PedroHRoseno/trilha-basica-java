@@ -35,7 +35,7 @@ public class Selecao extends Controle{
     public List<Pluviometro> leListaPluviometro(int escolhaQuantidade) {
         List<Pluviometro> listaPluviometro = new ArrayList<Pluviometro>();
         for(int i=0; i < escolhaQuantidade; i++){
-            listaPluviometro.add(new Pluviometro(leString()));
+            listaPluviometro.add(new Pluviometro(leString().toUpperCase().replaceAll(" ", "")));
         }
         return listaPluviometro;
     }

@@ -1,6 +1,12 @@
 package exercicio5;
 
 public class Pluviometro {
+    /**
+     * Tipo A: 100 ml
+     * Tipo B: 200 ml
+     * Tipo C: 300 ml
+     * Caso não digite um tipo válido, o default é 50 ml
+     */
     private String tipo;
     private int mililitros;
 
