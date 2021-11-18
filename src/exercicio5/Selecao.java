@@ -1,6 +1,8 @@
 package exercicio5;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Selecao extends Controle{
@@ -22,15 +24,8 @@ public class Selecao extends Controle{
 
     public Caminhao selecionaCaminhao(){
         insereCaminhao();
-        int maiorValor = 0;
-        Caminhao maiorCaminhao = new Caminhao();
-        for(Caminhao caminhao: this.listaCaminhoes) {
-            if(caminhao.getMililitrosTransportados() > maiorValor){
-                maiorValor = caminhao.getMililitrosTransportados();
-                maiorCaminhao = caminhao;
-            }
-        }
-        return maiorCaminhao;
+        this.listaCaminhoes.sort(Comparator.comparingInt(Caminhao::getMililitrosTransportados));
+        return this.listaCaminhoes.get(this.listaCaminhoes.size() - 1);
     }
 
     public List<Pluviometro> leListaPluviometro(int escolhaQuantidade) {

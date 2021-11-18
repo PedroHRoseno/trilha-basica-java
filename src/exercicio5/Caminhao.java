@@ -20,9 +20,7 @@ public class Caminhao {
     }
     
     public void calcularMililitrosTransportados(){
-        for (Pluviometro pluviometro: this.listaPluviometro) {
-            this.mililitrosTransportados += pluviometro.getMililitros();
-        }
+        this.listaPluviometro.forEach(pluviometro -> this.mililitrosTransportados += pluviometro.getMililitros());
     }
 
     public void setTipo(String tipo) {
